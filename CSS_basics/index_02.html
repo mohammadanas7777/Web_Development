@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        .yellow{
+            background-color: yellow;
+        }
+
+        /* Id selector */
+        #green{
+            color: orange;
+            background-color: green;
+        }
+
+        /* Child Selector */
+        div > p{
+            color:blue;
+            background-color: aqua;
+        }
+
+        /* Descendant Selector -  
+        No need to have a direct child.
+        Grandchild, greatgrand child, etc...*/
+        div p {
+            color:red;
+            background-color: pink;
+        }
+
+        /* Universal Selector */
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        /* Pseudo Selector */
+        /* If the user already visited this website, it will appear as yellow. */
+        a:visited{
+            color:yellow;
+        }
+
+        /* If the user already haven't visited this website, it will appear as Blue. */
+        a:link{
+            color:blue
+        }
+        
+        /* Background will become orangered when someone clicks the link. */
+        a:active{
+            background-color: orangered;
+        }
+        
+        /* Background will become cornfflowerblue when someone hovers on it. */
+        a:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am the first child.</p>
+        <p>I am the second child.</p>
+    </main>
+
+    <div class="yellow">
+        This is div. I don't have an ID.
+        <p> I am a child of div. Also, Descendent of div.</p>
+        <article>
+            <p>
+                I am not the direct child of div. Therefor no Child selector.
+                But, i am a Descendant of div. Therefore, Descendant Selector.
+            </p>
+        </article>
+    </div>
+
+    <div id="green">
+        I am not class yellow div, rather my ID is green.
+    </div>
+    <a href="https://www.google.com">Go to google search.</a>
+
+</body>
+</html>
